@@ -1,0 +1,234 @@
+var dia_intro = "intro#\n
+ВВОД: Достал. Вы там?\n
+САРА: Да.\n
+ВВОД: Тот же, что на фотографиях?\n
+САРА: Не-а, старенький портатив того, что у них раньше было в двигателе. Только пришли мне идентификатор передачи после запуска оборудования. Как мы и обговаривали.\n
+ВВОД: Как обговаривали? Я думал мы будем работать над новейшей£моделью.\n
+САРА: Бэкенд в целом тот же.\n
+ВВОД: Нахуй это. В работе с таким комплектом у меня опыта нет. Я пас.\n
+САРА: Поздно давать заднюю. С каких это пор ты боишься смерти?\n
+ВВОД: Смерть — последнее, о чём я волнуюсь. Вот то, что меня упекут в£комплекс, пугает по-настоящему.\n
+САРА: #hesitate# Ладно, слушай.\n
+САРА: Да, такую железку мы видим впервые, но они все для одной и той же цели.\n
+САРА: Скорее всего, в стареньких моделях используется тот-же код. Фронтенд был основным скачком вперёд. Всегда им был.\n
+WAIT: 4\n
+УВЕДОМЛЕНИЕ: ВИКТОР больше не АФК.\n
+WAIT: 3\n
+САРА: И на удалёнке у тебя много опыта. Сколько у нас ушло на взлом новенькой модели?\n
+ВВОД: 10 минут.\n
+САРА: Уверена, эту мы взломаем также быстро.\n
+WAIT: 4\n
+ВИКТОР: ну так вот, я попросил её взять полевой комлект LK912, вместо этого\n
+ВИКТОР: он обрабатывает запросы с более старого сервера, всё остальное более-менее такое же\n
+ВВОД: Наверное в настройках увижу.\n
+ВИКТОР: поэтому-то ты и не мог подделать рукопожатие на более новой модели. похоже, это исправили\n
+ВИКТОР: если его подключить к серверу и срабатывает маячок, в запасе всего 15 минут. буду держать вас в курсе\n
+ВИКТОР: мы можем извлечь из него локальные файлы до этого. волноваться по сути не о чем.\n
+ВИКТОР: и ещё проясню — это не пренебрежение риском. я уже работал с дизайнером железа. всё пучком\n
+ВВОД: Ладно.\n
+WAIT: 2\n
+ВИКТОР: ну, мы приступаем или нет?\n
+WAIT: 3\n
+ВВОД: А, похуй.\n
+WAIT: 1\n
+САРА: И, полагаю, у всех готовы пути отступления? Мой готов.\n
+WAIT: 3\n
+ВИКТОР: у меня тоже\n
+WAIT: 3\n
+САРА: А что ты, Аксель?\n
+WAIT: 2\n
+СОБЫТИЕ: показать петлю\n
+WAIT: 1\n
+ВВОД: Мой всегда под рукой.\n
+WAIT: 0.5\n
+СОБЫТИЕ: показать петлю активной\n
+WAIT: 5\n
+САРА: Тогда приступим. Запускай и пришли мне идентификатор LFS из файлов полевого комплекта.\n
+WAIT: 0.5\n
+САРА: Так как комплект довольно старый, локальные файлы не должны быть защищены. Подключиться к полевому комплекту и скопировать их не должно составить труда.\n
+WAIT: 0.5\n
+САРА: идентификатор LFS должно быть где-то в папке настроек, проверь как достанешь файлы из комплекта.\n
+";
+
+
+var dia_before_sending_id = "before_sending_id#\n
+VIKTOR: holy shit\n
+WAIT: 2\n
+SARAH: What?\n
+WAIT: 3\n
+VIKTOR: i got access to the security garage doors\n
+WAIT: 3\n
+SARAH: They can just override it. Stop messing around.\n
+WAIT: 3\n
+VIKTOR: still buy us some time though\n
+WAIT: 3\n
+SARAH: How many trucks are there?\n
+WAIT: 3\n
+VIKTOR: idk at least 200\n
+VIKTOR: imagine having a hangar like that and you dont airgap the network\n
+WAIT: 3\n
+SARAH: Entire place is held up by duct tape. You'd be surprised.\n
+WAIT: 3\n
+VIKTOR: ive worked here longer than you\n
+WAIT: 3\n
+SARAH: Am I supposed to be jealous now?\n
+WAIT: 3\n
+VIKTOR: what do you mean?\n
+WAIT: 3\n
+SARAH: You know what I mean.\n
+WAIT: 3\n
+VIKTOR: well at least i didnt write interrogation presets\n
+WAIT: 3\n
+SARAH: They work on engine code. Which is your branch.\n
+SARAH: Every single person here, including you, is going to hell.\n
+WAIT: 3\n
+VIKTOR: i think we're already in hell\n
+WAIT: 3\n
+SARAH: Whatever. Let's just get it over with.\n
+WAIT: 4\n
+SARAH: How's it looking, Axel? Did you get the ID from the config?\n
+";
+
+
+var dia_id_found = "id_found#\n
+INPUT: Got it: (insert_id_here).\n
+WAIT: 3\n
+SARAH: Thanks. What do you think?\n
+WAIT: 1\n
+INPUT: Looking at the config right now, shit is ancient. It's running£K-COM. Are there still servers handling requests?\n
+WAIT: 3\n
+SARAH: The floor has power. Some guy told me they're still running.\n
+WAIT: 2\n
+VIKTOR: did he ask for your name? was he suspicious?\n
+WAIT: 2\n
+SARAH: No, but he did ask for my number.\n
+WAIT: 1\n
+INPUT: I'll need a sheet of active inmate registrations, and a£schematic of the K-COM server junction to spoof the handshake.\n
+INPUT: The authorization keygen I can handle.\n
+WAIT: 3\n
+VIKTOR: i got the schematic\n
+WAIT: 1\n
+SARAH: Which one do you mean?\n
+WAIT: 1\n
+INPUT: The one with 7 columns. Inmate numbers, etc.\n
+WAIT: 1\n
+FILETRANSFER: Schematic_09.asc,Viktor\n
+WAIT: 0.5\n
+VIKTOR: sounds good. got the K-COM schematic for you here\n
+WAIT: 3\n
+VIKTOR: sarah, is the worm ready to go? did you route the trace to the field kit?\n
+WAIT: 3\n
+FILETRANSFER: AUI_2068.cve,Sarah\n
+WAIT: 0.5\n
+SARAH: Yeah, the worm is good to go.\n
+WAIT: 2\n
+VIKTOR: then we're set. axel, let me know when you connect to the server and ill see whether they catch it\n
+WAIT: 3\n
+SARAH: They're going to get the trace.\n
+WAIT: 3\n
+VIKTOR: one can hope\n
+WAIT: 1\n
+SARAH: I'll have the REF input for the key ready in a bit, Axel. Figured out a new crack.\n
+WAIT: 1\n
+INPUT: Thanks. The K-COM server key should let me in.\n
+WAIT: 1\n
+VIKTOR: check your downloads if they got corrupted or not\n
+WAIT: 1\n
+VIKTOR: but if the files look good, then you're set to get the auth key generated\n
+WAIT: 15\n
+SARAH: Got the REF number for the gen here;;; (insert_ref_number).\n
+AXEL: ###on_save_load###Got the authorization key ready. Just have to connect to it now.\n
+SARAH: ###on_save_load###Okay, sounds good.\n
+";
+
+
+var dia_before_wipe = "before_wipe#\n
+INPUT: I got root access. New pass is 9jXngk.\n
+WAIT: 1\n
+VIKTOR: make it quick sarah, they caught the trace\n
+WAIT: 2\n
+SARAH: Got it!\n
+WAIT: 1\n
+INPUT: Viktor, you see anything?\n
+WAIT: 2\n
+VIKTOR: 4 trucks are firing up\n
+WAIT: 1\n
+VIKTOR: convoy is moving out quick now\n
+WAIT: 3\n
+SARAH: Worm is running. Give it like 30 seconds\n
+WAIT: 5\n
+VIKTOR: i see security running north to the facility\n
+WAIT: 3\n
+SARAH: Anything south?\n
+WAIT: 3\n
+VIKTOR: doesnt look like it\n
+WAIT: 3\n
+SARAH: Then we're safe.\n
+WAIT: 3\n
+VIKTOR: you have a read? is it working?\n
+WAIT: 5\n
+SARAH: The macro centrifuge should have stopped by now, right?\n
+WAIT: 3\n
+VIKTOR: yes\n
+WAIT: 3\n
+SARAH: It went down for a second, but it's back up.\n
+WAIT: 3\n
+VIKTOR: how the hell is the centrifuge still running?\n
+WAIT: 3\n
+SARAH: Nothing's changing.\n
+WAIT: 3\n
+VIKTOR: give me a sec\n
+WAIT: 1\n
+INPUT: How far are the trucks? Can I make a run for it?\n
+VIKTOR: no just wait\n
+WAIT: 0.5\n
+SARAH: Run where?\n
+WAIT: 4\n
+VIKTOR: what about now?\n
+WAIT: 3\n
+SARAH: Centrifuge is steady at 98%.\n
+WAIT: 3\n
+VIKTOR: then we're screwed.\n
+WAIT: 3\n
+SARAH: Let's run it again\n
+WAIT: 3\n
+VIKTOR: if you're in the server by the time they get axel, we're next\n
+VIKTOR: it's too risky\n
+SARAH: We might not get another chance\n
+WAIT: 1\n
+INPUT: Shut the fuck up and let's get this over with.\n
+INPUT: All they'll find is an old field kit, wiped disks, and some£former tech hanging from the ceiling. You have no trace.\n
+INPUT: They'll think I'm some preset junkie. I was expecting this.\n
+WAIT: 4\n
+VIKTOR: what do you mean hanging from the ceiling?\n
+WAIT: 1\n
+INPUT: It's my way out. What do you want me to say?\n
+WAIT: 2\n
+SARAH: No it's not.\n
+WAIT: 3\n
+VIKTOR: your brain won't be destroyed. they will plug you in the machine\n
+WAIT: 1\n
+INPUT: What?\n
+WAIT: 3\n
+SARAH: You're going to have to cripple your brain.\n
+WAIT: 1\n
+VIKTOR: do you have any power tools? firearms?\n
+WAIT: 1\n
+VIKTOR: trucks will be there soon now\n
+WAIT: 2\n
+VIKTOR: theres no easy way to say this, but you'll have to find another way\n
+WAIT: 3\n
+UPDATE: Viktor has left the channel.\n
+EVENT: disconnect viktor\n
+WAIT: 3\n
+SARAH: I'm so sorry we fucked up Axel, but if we're going to try again, then we have to split, now.\n
+WAIT: 1\n
+INPUT: I have no other way out.\n
+WAIT: 4\n
+UPDATE: Sarah has left the channel.\n
+EVENT: disconnect sarah\n
+WAIT: 4\n
+EVENT: despair\n
+";
+
+
