@@ -1,5 +1,5 @@
 # Lang conversion from/to gamecode ver 0.1
-# Author: Wollip
+# Author: Rufat
 # Licensed under the MIT License
 
 #!/usr/bin/env python3
