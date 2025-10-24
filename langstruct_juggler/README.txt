@@ -1,6 +1,6 @@
 -------------------------------------- LangStruct Juggler intended for s.p.l.i.t game translation -----------------------------------------------
 Author: Wollip
-ver: 0.1
+ver: 0.2
 
 0) It is best to run both .bat batchers, first patch_in.bat, then patch_out.bat, to create the necessary file structure
 
@@ -22,7 +22,7 @@ ver: 0.1
 
 --------------------------------------- LangStruct Juggler созданный для перевода игры s.p.l.i.t ------------------------------------------------
 Автор: Wollip
-вер: 0.1
+вер: 0.2
 
 0) Лучше запустить оба .bat батчера, сначала patch_in.bat, потом patch_out.bat, для создания необходимой структуры
 

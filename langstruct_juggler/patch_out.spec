@@ -5,7 +5,7 @@ a = Analysis(
     ['patch_out.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('lang', 'lang')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

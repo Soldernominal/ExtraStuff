@@ -12,6 +12,13 @@ import shutil
 3) You have to manually copy/paste all new batches from eng.txt to ru.txt(separate batches by AT LEAST 1 line)
 4) Enjoy
 """
+def resource_path(relative_path):
+    """Get absolute path to resource, works for dev and for PyInstaller exe."""
+    if hasattr(sys, '_MEIPASS'):
+        base_path = os.path.dirname(sys.executable)
+    else:
+        base_path = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(base_path, relative_path)
 
 def readable_to_gamecode(translatedfile = "ru.txt", gamecodefile="ru_gamecode_lines.txt", eng_fiename="eng.txt"):
     """
@@ -22,7 +29,7 @@ def readable_to_gamecode(translatedfile = "ru.txt", gamecodefile="ru_gamecode_li
                         They are expected to be separated by 1 or more lines.
         gamecodefile: Each line is of the raw gamecode form, each corresponds to a singular batch.
     """
-    folder = os.path.join(os.path.dirname(__file__), "lang")
+    folder = resource_path("lang")
     os.makedirs(folder, exist_ok=True)  # create lang if DNE
 
     # Full path to the output file
@@ -32,6 +39,7 @@ def readable_to_gamecode(translatedfile = "ru.txt", gamecodefile="ru_gamecode_li
 
     # Create file if DNE
     if not os.path.exists(translatedfile):
+        print(f"Creating eng.txt at {eng_fiename}")
         with open(translatedfile, "w", encoding="utf-8") as f:
             shutil.copyfile(eng_fiename, translatedfile)
 
@@ -59,7 +67,8 @@ def gamecode_to_readable(rawfilename="rawstr.txt", filtered_fiename="eng.txt"):
         filtered_fiename: Each line from the raw file gets converted into multiple lines,
                             until the first empty line translated batch
     """
-    folder = os.path.join(os.path.dirname(__file__), "lang")
+    #folder = os.path.join(os.path.dirname(__file__), "lang")
+    folder = resource_path("lang")
     os.makedirs(folder, exist_ok=True)  # create lang if it DNE
 
     # Full path to the output file
@@ -68,6 +77,7 @@ def gamecode_to_readable(rawfilename="rawstr.txt", filtered_fiename="eng.txt"):
 
     # create rawstr.txt if it DNE
     if not os.path.exists(rawfilename):
+        print(f"Creating rawstr.txt at {rawfilename}")
         with open(rawfilename, "w", encoding="utf-8") as f:
             f.write("")  # empty file
 

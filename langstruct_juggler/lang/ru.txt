@@ -1,4 +1,4 @@
-var dia_intro = "intro#\n
+var dia_introdf = "intro#\n
 ВВОД: Достал. Вы там?\n
 САРА: Да.\n
 ВВОД: Тот же, что на фотографиях?\n
@@ -52,183 +52,183 @@ WAIT: 0.5\n
 
 
 var dia_before_sending_id = "before_sending_id#\n
-VIKTOR: holy shit\n
+ВИКТОР: охренеть\n
 WAIT: 2\n
-SARAH: What?\n
+САРА: Что?\n
 WAIT: 3\n
-VIKTOR: i got access to the security garage doors\n
+ВИКТОР: у меня доступ к дверям охранного гаража\n
 WAIT: 3\n
-SARAH: They can just override it. Stop messing around.\n
+САРА: Им не составит труда отозвать его. Хватит валять дурака.\n
 WAIT: 3\n
-VIKTOR: still buy us some time though\n
+ВИКТОР: и всё-же время нам это выигрывает\n
 WAIT: 3\n
-SARAH: How many trucks are there?\n
+САРА: Сколько там грузовиков?\n
 WAIT: 3\n
-VIKTOR: idk at least 200\n
-VIKTOR: imagine having a hangar like that and you dont airgap the network\n
+ВИКТОР: хз, около 200\n
+ВИКТОР: только подумайте, такой ангар и без изолированной сети\n
 WAIT: 3\n
-SARAH: Entire place is held up by duct tape. You'd be surprised.\n
+САРА: Всё это место на соплях держится. Ты ещё удивишься.\n
 WAIT: 3\n
-VIKTOR: ive worked here longer than you\n
+ВИКТОР: я тут работаю дольше тебя\n
 WAIT: 3\n
-SARAH: Am I supposed to be jealous now?\n
+САРА: Мне умереть от зависти?\n
 WAIT: 3\n
-VIKTOR: what do you mean?\n
+ВИКТОР: в смысле?\n
 WAIT: 3\n
-SARAH: You know what I mean.\n
+САРА: В карамысле, ты знаешь.\n
 WAIT: 3\n
-VIKTOR: well at least i didnt write interrogation presets\n
+ВИКТОР: ну по крайней мере не я написал параметры для допросов\n
 WAIT: 3\n
-SARAH: They work on engine code. Which is your branch.\n
-SARAH: Every single person here, including you, is going to hell.\n
+САРА: Они работают на коде двигателя. Это твоя специальность.\n
+САРА: Каждый тут, включая тебя, отправится прямиком в ад.\n
 WAIT: 3\n
-VIKTOR: i think we're already in hell\n
+ВИКТОР: думаю мы уже там\n
 WAIT: 3\n
-SARAH: Whatever. Let's just get it over with.\n
+САРА: Неважно. Давай уже заканчивать.\n
 WAIT: 4\n
-SARAH: How's it looking, Axel? Did you get the ID from the config?\n
+САРА: Как там обстановка, Аксель? Достал идентификатор из настроек?\n
 ";
 
 
 var dia_id_found = "id_found#\n
-INPUT: Got it: (insert_id_here).\n
+ВВОД: Достал: (insert_id_here).\n
 WAIT: 3\n
-SARAH: Thanks. What do you think?\n
+САРА: Спасибо. И как?\n
 WAIT: 1\n
-INPUT: Looking at the config right now, shit is ancient. It's running£K-COM. Are there still servers handling requests?\n
+ВВОД: Вот, копаюсь в настройках, эта хрень такая древняя. Тут запущен£K-COM. Активные сервера ещё существуют?\n
 WAIT: 3\n
-SARAH: The floor has power. Some guy told me they're still running.\n
+САРА: Пол под напряжением. Один парень рассказывал мне,  они ещё работают.\n
 WAIT: 2\n
-VIKTOR: did he ask for your name? was he suspicious?\n
+ВИКТОР: имя спрашивал? он выглядел подозрительно?\n
 WAIT: 2\n
-SARAH: No, but he did ask for my number.\n
+САРА: Нет, но номер мой выпрашивал.\n
 WAIT: 1\n
-INPUT: I'll need a sheet of active inmate registrations, and a£schematic of the K-COM server junction to spoof the handshake.\n
-INPUT: The authorization keygen I can handle.\n
+ВВОД: Мне понадобится список регистраций действующих заключённых и£чертежи серверного узла K-COM для подделки рукопожатия.\n
+ВВОД: Ключом авторизации я займусь сам.\n
 WAIT: 3\n
-VIKTOR: i got the schematic\n
+ВИКТОР: чертёж у меня\n
 WAIT: 1\n
-SARAH: Which one do you mean?\n
+САРА: Ты о каком?\n
 WAIT: 1\n
-INPUT: The one with 7 columns. Inmate numbers, etc.\n
+ВВОД: С 7 колоннами. Номера заключённых итд.\n
 WAIT: 1\n
-FILETRANSFER: Schematic_09.asc,Viktor\n
+ПЕРЕДАЧА: Schematic_09.asc,Виктор\n
 WAIT: 0.5\n
-VIKTOR: sounds good. got the K-COM schematic for you here\n
+ВИКТОР: супер. а вот и твой чертёж K-COM\n
 WAIT: 3\n
-VIKTOR: sarah, is the worm ready to go? did you route the trace to the field kit?\n
+ВИКТОР: сара, червячок готов? ты перенаправила сигнал к полевому комплекту?\n
 WAIT: 3\n
-FILETRANSFER: AUI_2068.cve,Sarah\n
+ПЕРЕДАЧА: AUI_2068.cve,Сара\n
 WAIT: 0.5\n
-SARAH: Yeah, the worm is good to go.\n
+САРА: Да, червячок готов.\n
 WAIT: 2\n
-VIKTOR: then we're set. axel, let me know when you connect to the server and ill see whether they catch it\n
+ВИКТОР: тогда мы готовы. аксель, дай знать как подключишься к серверу и я прослежу не схватят ли они его\n
 WAIT: 3\n
-SARAH: They're going to get the trace.\n
+САРА: Они засекут сигнал.\n
 WAIT: 3\n
-VIKTOR: one can hope\n
+ВИКТОР: надежда умирает последней\n
 WAIT: 1\n
-SARAH: I'll have the REF input for the key ready in a bit, Axel. Figured out a new crack.\n
+САРА: REF-ввод для ключа будет у меня через некоторое время, Аксель. Я придумала новый способ взлома.\n
 WAIT: 1\n
-INPUT: Thanks. The K-COM server key should let me in.\n
+ВВОД: Спасибо. Ключ к серверу K-COM должен меня впустить.\n
 WAIT: 1\n
-VIKTOR: check your downloads if they got corrupted or not\n
+ВИКТОР: проверь, не повредились ли загруженные файлы\n
 WAIT: 1\n
-VIKTOR: but if the files look good, then you're set to get the auth key generated\n
+ВИКТОР: если файлы в порядке, тогда получить токен раз плюнуть\n
 WAIT: 15\n
-SARAH: Got the REF number for the gen here;;; (insert_ref_number).\n
-AXEL: ###on_save_load###Got the authorization key ready. Just have to connect to it now.\n
-SARAH: ###on_save_load###Okay, sounds good.\n
+САРА: Достала REF-номер для генератора;;; (insert_ref_number).\n
+АКСЕЛЬ: ###on_save_load###Ключ авторизации готов. Осталось только подключиться к нему.\n
+САРА: ###on_save_load###Хорошо, звучит неплохо.\n
 ";
 
 
 var dia_before_wipe = "before_wipe#\n
-INPUT: I got root access. New pass is 9jXngk.\n
+ВВОД: У меня рут доступ. Новый пароль 9jXngk.\n
 WAIT: 1\n
-VIKTOR: make it quick sarah, they caught the trace\n
+ВИКТОР: живее сара, они засекли сигнал\n
 WAIT: 2\n
-SARAH: Got it!\n
+САРА: Получилось!\n
 WAIT: 1\n
-INPUT: Viktor, you see anything?\n
+ВВОД: Виктор, что-нибудь видишь?\n
 WAIT: 2\n
-VIKTOR: 4 trucks are firing up\n
+ВИКТОР: 4 грузовика заводятся\n
 WAIT: 1\n
-VIKTOR: convoy is moving out quick now\n
+ВИКТОР: конвой уже выдвигается\n
 WAIT: 3\n
-SARAH: Worm is running. Give it like 30 seconds\n
+САРА: Червячок запущен. Ещё секунд 30\n
 WAIT: 5\n
-VIKTOR: i see security running north to the facility\n
+ВИКТОР: охрана движется на север, к комплексу\n
 WAIT: 3\n
-SARAH: Anything south?\n
+САРА: А что юг?\n
 WAIT: 3\n
-VIKTOR: doesnt look like it\n
+ВИКТОР: не похоже\n
 WAIT: 3\n
-SARAH: Then we're safe.\n
+САРА: Тогда мы в безопасности.\n
 WAIT: 3\n
-VIKTOR: you have a read? is it working?\n
+ВИКТОР: есть контакт? работает?\n
 WAIT: 5\n
-SARAH: The macro centrifuge should have stopped by now, right?\n
+САРА: Макро-центрифуга уже должна была остановиться, да?\n
 WAIT: 3\n
-VIKTOR: yes\n
+ВИКТОР: да\n
 WAIT: 3\n
-SARAH: It went down for a second, but it's back up.\n
+САРА: Она отрубилась на секундочку, но теперь снова в норме.\n
 WAIT: 3\n
-VIKTOR: how the hell is the centrifuge still running?\n
+ВИКТОР: какого дьявола она всё ещё работает?\n
 WAIT: 3\n
-SARAH: Nothing's changing.\n
+САРА: Ничего не изменилось.\n
 WAIT: 3\n
-VIKTOR: give me a sec\n
+ВИКТОР: дай мне сек\n
 WAIT: 1\n
-INPUT: How far are the trucks? Can I make a run for it?\n
-VIKTOR: no just wait\n
+ВВОД: Как далеко грузовики? Я успею рвануть?\n
+ВИКТОР: нет просто жди\n
 WAIT: 0.5\n
-SARAH: Run where?\n
+САРА: Рвануть куда?\n
 WAIT: 4\n
-VIKTOR: what about now?\n
+ВИКТОР: а сейчас?\n
 WAIT: 3\n
-SARAH: Centrifuge is steady at 98%.\n
+САРА: Центрифуга стабильно работает на 98%.\n
 WAIT: 3\n
-VIKTOR: then we're screwed.\n
+ВИКТОР: тогда мы обречены.\n
 WAIT: 3\n
-SARAH: Let's run it again\n
+САРА: Давай запустим снова\n
 WAIT: 3\n
-VIKTOR: if you're in the server by the time they get axel, we're next\n
-VIKTOR: it's too risky\n
-SARAH: We might not get another chance\n
+ВИКТОР: не покинешь сервер до того как схватят Акселя, мы следующие\n
+ВИКТОР: слишком рискованно\n
+САРА: Другого шанса может не быть\n
 WAIT: 1\n
-INPUT: Shut the fuck up and let's get this over with.\n
-INPUT: All they'll find is an old field kit, wiped disks, and some£former tech hanging from the ceiling. You have no trace.\n
-INPUT: They'll think I'm some preset junkie. I was expecting this.\n
+ВВОД: Завалитесь уже, блядь, и давайте покончим с этим.\n
+ВВОД: Они найдут только старый полевой комплект, потёртые диски, и£устаревшие приборы, свисабщие с потолка. У вас нет сигнала.\n
+ВВОД: Они подумают, что я просто наркоша на пресетах. Я ожидал такого.\n
 WAIT: 4\n
-VIKTOR: what do you mean hanging from the ceiling?\n
+ВИКТОР: всмысле свисающие с потолка?\n
 WAIT: 1\n
-INPUT: It's my way out. What do you want me to say?\n
+ВВОД: Мой путь отступления. Что мне ещё сказать?\n
 WAIT: 2\n
-SARAH: No it's not.\n
+САРА: А вот и нет.\n
 WAIT: 3\n
-VIKTOR: your brain won't be destroyed. they will plug you in the machine\n
+ВИКТОР: твой мозг не пострадает. они подключат тебя к устройству\n
 WAIT: 1\n
-INPUT: What?\n
+ВВОД: Что?\n
 WAIT: 3\n
-SARAH: You're going to have to cripple your brain.\n
+САРА: Тебе придётся искалечить свой мозг.\n
 WAIT: 1\n
-VIKTOR: do you have any power tools? firearms?\n
+ВИКТОР: есть электроприборы какие? огнестрел?\n
 WAIT: 1\n
-VIKTOR: trucks will be there soon now\n
+ВИКТОР: грузовики уже на подходе\n
 WAIT: 2\n
-VIKTOR: theres no easy way to say this, but you'll have to find another way\n
+ВИКТОР: нелегко такое говорить, но тебе придётся найти другой выход\n
 WAIT: 3\n
-UPDATE: Viktor has left the channel.\n
-EVENT: disconnect viktor\n
+УВЕДОМЛЕНИЕ: Виктор покинул(а) канал.\n
+СОБЫТИЕ: отключить Виктора\n
 WAIT: 3\n
-SARAH: I'm so sorry we fucked up Axel, but if we're going to try again, then we have to split, now.\n
+САРА: Мне жаль что мы так проебались, Аксель, но если собираемся попытаться снова — придётся разделиться, сейчас-же.\n
 WAIT: 1\n
-INPUT: I have no other way out.\n
+ВВОД: У меня нет других вариантов.\n
 WAIT: 4\n
-UPDATE: Sarah has left the channel.\n
-EVENT: disconnect sarah\n
+УВЕДОМЛЕНИЕ: Сара покинул(а) канал.\n
+СОБЫТИЕ: отключить Сару\n
 WAIT: 4\n
-EVENT: despair\n
+СОБЫТИЕ: отчаяние\n
 ";
 
 
